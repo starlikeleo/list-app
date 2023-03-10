@@ -1,5 +1,5 @@
 // 「Hello World」とコンソールに出力してください
-console.log("Hello World")
+console.log("Hello World");
 
 // 「にんじゃわんこ」とコンソールに出力してください
 console.log("にんじゃわんこ");
