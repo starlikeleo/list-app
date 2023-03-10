@@ -5,4 +5,4 @@ console.log(5 + 3);
 console.log(20 - 8);
 
 // "4 + 5" を文字列として出力してください
-console.log("4 - 5");
+console.log("4 + 5");
