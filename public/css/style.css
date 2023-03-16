@@ -168,6 +168,16 @@ header {
   text-align: center;
 }
 
+.name-column {
+  width: 120px;
+  text-align: left;
+}
+
+.URL-column{
+  width: 72px;
+  text-align: left;
+}
+
 .table-body {
   background-color: #ffffff;
 }
@@ -186,6 +196,12 @@ header {
 }
 
 .table-body .name-column {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8491a5;
+}
+
+.table-body .URL-column {
   font-size: 14px;
   font-weight: 500;
   color: #8491a5;

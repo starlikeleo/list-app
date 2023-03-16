@@ -2,49 +2,38 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>LIST APP</title>
+    <title>PETMEMORIAL official site</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="/send_url.js"></script>
   </head>
   <body>
     <header>
-      <a class="header-logo">LIST APP</a>
+      <!-- href属性を追加してください -->
+      <a class="header-logo" href="/" >PETMEMORIAL</a>
     </header>
     <div class="container">
       <div class="container-header">
-        <h1>買い物リスト</h1>
+        <h1>楽曲リスト</h1>
       </div>
       <div class="index-table-wrapper">
         <div class="table-head">
-          <span class="id-column">ID</span>
-          <span>買うもの</span>
+          <span class="id-column">No</span>
+          <span class="name-column">Title</span>
+          <span class="URL-column">URL</span>
         </div>
-        <!-- EJSを用いてitemを定義してください -->
-        <% const item = {id: 4, name: 'とまと'} %>
-        
+        <% const items = [
+          {No: 1, name: 'My Life', URL: 'https://youtu.be/X6xzSO0B0MQ'},
+          {No: 2, name: '', URL: 'https://youtu.be/X6xzSO0B0MQ'},
+          {No: 3, name: '', URL: 'https://youtu.be/X6xzSO0B0MQ'}
+        ]; %>
         <ul class="table-body">
-          <li>
-            <span class="id-column">1</span>
-            <span class="name-column">じゃがいも</span>
-          </li>
-          <li>
-            <span class="id-column">2</span>
-            <span class="name-column">にんじん</span>
-          </li>
-          <li>
-            <span class="id-column">3</span>
-            <span class="name-column">たまねぎ</span>
-          </li>
-          <li>
-            <span class="id-column">
-              <!-- itemのidプロパティの値を表示してください -->
-              <%= item.id %>
-            </span>
-            <span class="name-column">
-              <!-- itemのnameプロパティの値を表示してください -->
-              <%= item.name %>
-            </span>
-          </li>
+          <% items.forEach((item) => { %>
+            <li>
+              <span class="id-column"><%= item.No %></span>
+              <span class="name-column"><%= item.name %></span>
+              <span class="URL-column" href="/"><%= item.URL %></span>
+            </li>
+          <% }); %>
         </ul>
       </div>
     </div>
